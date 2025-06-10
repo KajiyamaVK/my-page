@@ -14,7 +14,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "VK Design",
-  description: `Portfólio profissional de design gráfico e desenvolvimento web. Criando soluções criativas e funcionais para o seu negócio.`,
+  description: `
+    Portfólio profissional de design gráfico e desenvolvimento web. 
+    Criando soluções criativas e funcionais para o seu negócio. Criando sistemas prontos ou
+    personalizados para atender às suas necessidades - especializado para pequenas e médias empresas.`,
 };
 
 export default function RootLayout({

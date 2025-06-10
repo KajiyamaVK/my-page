@@ -124,9 +124,8 @@ export default function Portfolio() {
 
       {/* Navigation */}
       <motion.nav
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          isScrolled ? "bg-[#001830]/95 backdrop-blur-md" : "bg-transparent"
-        }`}
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-[#001830]/95 backdrop-blur-md" : "bg-transparent"
+          }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
@@ -138,13 +137,13 @@ export default function Portfolio() {
             style={{ fontFamily: "Impact, Arial Black, sans-serif" }}
           >
             <Image
-            src={'/logo.jpg'}
-            width={50}
-            height={50}
-            alt="Uma imagem representando as letras V e K "
-            className="rounded-full"/>
+              src={'/logo.jpg'}
+              width={50}
+              height={50}
+              alt="Uma imagem representando as letras V e K "
+              className="rounded-full" />
 
-          
+
           </motion.div>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -484,7 +483,7 @@ export default function Portfolio() {
                       ))}
                     </div>
                     <blockquote className="text-xl mb-6 text-gray-300">
-                      "{testimonials[currentTestimonial].content}"
+                      &quot;{testimonials[currentTestimonial].content}&quot;
                     </blockquote>
                     <div>
                       <div className="font-bold text-[#28c3d2]">{testimonials[currentTestimonial].name}</div>
@@ -500,9 +499,8 @@ export default function Portfolio() {
                 <button
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentTestimonial ? "bg-[#28c3d2]" : "bg-gray-600"
-                  }`}
+                  className={`w-3 h-3 rounded-full transition-colors ${index === currentTestimonial ? "bg-[#28c3d2]" : "bg-gray-600"
+                    }`}
                 />
               ))}
             </div>

@@ -628,7 +628,7 @@ export default function Portfolio() {
                   </div>
                   <div className="flex items-center space-x-4">
                     <Phone className="h-6 w-6 text-[#28c3d2]" />
-                    <span>+55 (11) 99999-9999</span>
+                    <span>+55 (11) 98826-9888</span>
                   </div>
                   <div className="flex items-center space-x-4">
                     <MapPin className="h-6 w-6 text-[#28c3d2]" />
@@ -641,8 +641,8 @@ export default function Portfolio() {
                 <h4 className="text-xl font-bold mb-4 text-[#28c3d2]">Me Siga</h4>
                 <div className="flex space-x-4">
                   {[
-                    { icon: Github, href: "#" },
-                    { icon: Linkedin, href: "#" },
+                    { icon: Github, href: "https://github.com/kajiyamaVK" },
+                    { icon: Linkedin, href: "https://linkedin.com/in/victor-kajiyama" },
                     { icon: Twitter, href: "#" },
                   ].map((social, index) => (
                     <motion.a

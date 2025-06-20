@@ -99,7 +99,7 @@ export default function Portfolio() {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Olá Victor! Vi seu portfólio e gostaria de conversar sobre um projeto.")
-    window.open(`https://wa.me/5511999999999?text=${message}`, "_blank")
+    window.open(`https://wa.me/5511988269888?text=${message}`, "_blank")
   }
 
   return (
@@ -176,7 +176,7 @@ export default function Portfolio() {
           <div className="absolute top-1/2 left-1/4 text-[#28c3d2] text-3xl font-bold opacity-20 rotate-45">REACT</div>
         </motion.div>
 
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center mt-20 md:mt-0">
           <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
             <motion.h1
               className="text-5xl lg:text-7xl font-bold mb-6 leading-tight"

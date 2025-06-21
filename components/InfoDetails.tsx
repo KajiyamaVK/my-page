@@ -1,5 +1,4 @@
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react"
-import { motion } from "framer-motion"
 import React from "react"
 
 export function InfoDetails() {
@@ -30,18 +29,16 @@ export function InfoDetails() {
                         { icon: Linkedin, href: "#" },
                         { icon: Twitter, href: "#" },
                     ].map((social, index) => (
-                        <motion.a
+                        <a
                             key={index}
                             href={social.href}
-                            className="bg-[#28c3d2]/20 p-3 rounded-full hover:bg-[#28c3d2] hover:text-[#001830] transition-colors"
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.95 }}
+                            className="bg-[#28c3d2]/20 p-3 rounded-full hover:bg-[#28c3d2] hover:text-[#001830] transition-colors hover:scale-105"
                         >
                             <social.icon className="h-6 w-6" />
-                        </motion.a>
+                        </a>
                     ))}
                 </div>
             </div>
         </div>
     )
-} 
+}

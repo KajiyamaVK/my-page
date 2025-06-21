@@ -1,27 +1,19 @@
-import { motion } from "framer-motion"
 import Image from "next/image"
 import React from "react"
 
 export function AboutSection() {
     return (
         <section id="sobre" className="py-24">
-            <div className="max-w-7xl mx-auto px-6">
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                    className="grid lg:grid-cols-2 gap-12 items-center"
-                >
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div className="relative">
-                        <motion.div
+                        <div
                             className="absolute -top-8 -left-8 text-[#28c3d2] text-4xl font-bold opacity-30 rotate-12"
                             style={{ fontFamily: "Impact, Arial Black, sans-serif" }}
                         >
                             SOBRE
-                        </motion.div>
+                        </div>
                         <Image
-                            src="/logo.jpg"
+                            src="/aboutPhoto.jpg"
                             alt="Victor trabalhando"
                             width={400}
                             height={400}
@@ -44,19 +36,17 @@ export function AboutSection() {
                                 { skill: "AWS/DevOps", years: "4+ anos" },
                                 { skill: "UI/UX Design", years: "3+ anos" },
                             ].map((item, index) => (
-                                <motion.div
+                                <div
                                     key={index}
-                                    className="bg-[#001830]/50 p-4 rounded-lg border border-[#28c3d2]/20"
-                                    whileHover={{ scale: 1.05, borderColor: "#28c3d2" }}
+                                    className="bg-[#001830]/50 p-4 rounded-lg border border-[#28c3d2]/20 hover:border-[#28c3d2] transition-all duration-300"
                                 >
                                     <div className="font-bold text-[#28c3d2]">{item.skill}</div>
                                     <div className="text-sm text-gray-400">{item.years}</div>
-                                </motion.div>
+                                </div>
                             ))}
                         </div>
-                    </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     )
-} 
+}

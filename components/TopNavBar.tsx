@@ -2,29 +2,12 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import React from "react"
-import ReactCountryFlag from 'react-country-flag';
-import { usePathname, useRouter } from 'next/navigation';
 
 interface TopNavBarProps {
     isScrolled: boolean
 }
 
-const locales = [
-    { code: 'en-us', label: 'English', country: 'US' },
-    { code: 'pt-br', label: 'Português', country: 'BR' },
-];
-
 export function TopNavBar({ isScrolled }: TopNavBarProps) {
-    const router = useRouter();
-    const pathname = usePathname();
-    const currentLocale = pathname.split('/')[1];
-
-    const handleLocaleChange = (locale: string) => {
-        const segments = pathname.split('/');
-        segments[1] = locale;
-        router.push(segments.join('/'));
-    };
-
     return (
         <motion.nav
             className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-[#001830]/95 backdrop-blur-md" : "bg-transparent"}`}
@@ -62,23 +45,6 @@ export function TopNavBar({ isScrolled }: TopNavBarProps) {
                     })}
                 </div>
                 <div className="flex items-center space-x-4">
-                    <div className="flex items-center space-x-2">
-                        {locales.map((locale) => (
-                            <button
-                                key={locale.code}
-                                onClick={() => handleLocaleChange(locale.code)}
-                                className={`rounded-full p-1 border-2 transition-colors ${currentLocale === locale.code ? 'border-[#28c3d2] bg-[#001830]' : 'border-transparent bg-transparent'} hover:border-[#28c3d2]`}
-                                aria-label={locale.label}
-                            >
-                                <ReactCountryFlag
-                                    countryCode={locale.country}
-                                    svg
-                                    style={{ width: '2em', height: '2em', borderRadius: '50%' }}
-                                    title={locale.label}
-                                />
-                            </button>
-                        ))}
-                    </div>
                     <Button className="bg-[#28c3d2] hover:bg-[#28c3d2]/80 text-[#001830] font-bold">Me Contrate</Button>
                 </div>
             </div>

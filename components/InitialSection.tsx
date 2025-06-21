@@ -1,10 +1,11 @@
-import { motion} from "framer-motion"
+import { motion, MotionValue} from "framer-motion"
+
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import React from "react"
 
 interface InitialSectionProps {
-    heroY: any
+    heroY: string | number | MotionValue<number> | MotionValue<string>
 }
 
 export function InitialSection({ heroY }: InitialSectionProps) {

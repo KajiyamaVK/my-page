@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion} from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import React from "react"
